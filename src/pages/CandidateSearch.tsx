@@ -81,26 +81,28 @@ const CandidateSearch: React.FC = () => {
   };
 
   return (
-    <div className="candidate-search-container">
-      <h1>Candidate Search</h1>
+    <div className="candidate-search-container container-fluid">
+      <h1 className='page-titles'>Candidate Search</h1>
 
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
 
       {currentCandidate && (
-        <div className="candidate-card">
-          <img src={currentCandidate.avatar_url} alt={currentCandidate.login} className="candidate-avatar" />
-          <div className="candidate-info">
-            <h2>{currentCandidate.name || currentCandidate.login} <span>({currentCandidate.login})</span></h2>
-            <p>Location: {currentCandidate.location || 'N/A'}</p>
-            <p>Email: <a href={`mailto:${currentCandidate.email}`}>{currentCandidate.email || 'N/A'}</a></p>
-            <p>Company: {currentCandidate.company || 'N/A'}</p>
-            <p>Profile: <a href={currentCandidate.html_url} target="_blank" rel="noopener noreferrer">{currentCandidate.html_url}</a></p>
+        <div className="card p-3 mb-2 bg-dark text-white">
+          <div>
+            <img src={currentCandidate.avatar_url} alt={currentCandidate.login} className="card-img-top img-fluid" />
           </div>
-          <div className="candidate-actions">
-            <button className="action-button decline" onClick={() => handleRejectCandidate()}>-</button>
-            <button className="action-button accept" onClick={() => handleSaveCandidate()}>+</button>
-          </div>
+            <div className="card-body">
+              <h2>{currentCandidate.name || currentCandidate.login} <span>({currentCandidate.login})</span></h2>
+                <p className="card-text">Location: {currentCandidate.location || 'N/A'}</p>
+                <p className="card-text">Email: <a href={`mailto:${currentCandidate.email}`}>{currentCandidate.email || 'N/A'}</a></p>
+                <p className="card-text">Company: {currentCandidate.company || 'N/A'}</p>
+                <p className="card-text">Profile: <a href={currentCandidate.html_url} target="_blank" rel="noopener noreferrer">{currentCandidate.html_url}</a></p>
+            </div>
+            <div className="candidate-actions button-group">
+              <button type="button" className="btn btn-danger" onClick={() => handleRejectCandidate()}>Deny</button>
+              <button type="button" className="btn btn-success" onClick={() => handleSaveCandidate()}>Accept</button>
+            </div>
         </div>
       )}
     </div>

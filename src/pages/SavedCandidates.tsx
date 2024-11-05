@@ -21,9 +21,13 @@ const SavedCandidates: React.FC = () => {
   };
 
   return (
-    <div className="saved-candidates-container">
+    <div className="saved-candidates-container container">
       <h1>Potential Candidates</h1>
-      <table className="candidate-table">
+            {/* Conditional rendering for "No candidates" message */}
+            {savedCandidates.length === 0 ? (
+        <p className="text-center mt-4">No candidates have been accepted yet!</p>
+      ) : (
+      <table className="candidate-table table-bordered table table-dark table-striped table-hover">
         <thead>
           <tr>
             <th>Image</th>
@@ -51,17 +55,15 @@ const SavedCandidates: React.FC = () => {
               <td>{candidate.company || 'N/A'}</td>
               <td>{candidate.bio || 'N/A'}</td>
               <td>
-                <button
-                  className="action-button reject"
-                  onClick={() => handleRejectCandidate(candidate.id)}
-                >
-                  -
-                </button>
+                <div className='button-group'>
+                <button type="button" className="btn btn-danger" onClick={() => handleRejectCandidate(candidate.id)}>-</button>
+                </div>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
+      )}
     </div>
   );
 };
