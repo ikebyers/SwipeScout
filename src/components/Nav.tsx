@@ -6,16 +6,16 @@ const Nav: React.FC = () => {
   return (
 <nav className="navbar navbar-expand-lg">
   <div className="container-fluid">
-    <div className="collapse navbar-collapse" id="navbarNav">
-    <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div className="collapse navbar-collapse " id="navbarNav">
+    <div className="collapse navbar-collapse " id="navbarNavAltMarkup">
     <div className="navbar-nav">
       <h5>
-        <NavLink className="nav-link" to="/" end>
+        <NavLink className="nav-link text-light" to="/" end>
         Home
         </NavLink>
       </h5>
       <h5>
-        <NavLink className="nav-link" to="/SavedCandidates">
+        <NavLink className="nav-link text-light" to="/SavedCandidates">
         Potential Candidates
         </NavLink>
       </h5>
