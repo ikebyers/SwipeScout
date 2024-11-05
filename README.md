@@ -55,7 +55,13 @@ npm run dev
 This project is licensed under the MIT License.
 
 ## Credits
-Ike Byers
+Ike Byers - **Primary Coding and Development**
+	•	GitHub REST API Documentation: Used for understanding the structure and usage of GitHub’s user and search API endpoints, which form the core of candidate data retrieval in SwipeScout.
+	•	React Documentation: Referenced for implementing React components, hooks, and managing state effectively, specifically with useEffect for handling side effects and useState for candidate data management.
+	•	TypeScript Documentation: Assisted in typing interfaces for GitHub API data responses, ensuring strong type checking and improving code reliability.
+	•	MDN Web Docs: for JavaScript clarifications on syntax, functions, and array handling methods used in the application logic.
+	•	Bootstrap Documentation: Used to design and style the navigation bar and buttons, ensuring a responsive and consistent user interface. 
+	•	React Router Documentation: Referenced to implement navigation and routing within the application, including transitions between pages such as candidate search and saved candidates.
 
 ## Tests
 N/A
