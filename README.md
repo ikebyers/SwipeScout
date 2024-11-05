@@ -9,7 +9,8 @@
 - [Tests](#tests)
 - [Questions](#questions)
 
-## Deployed 
+## Deployed Application
+https://swipescout.netlify.app
 
 ## Description
 SwipeScout is a web application that allows users to search for potential candidates, view detailed information about them, and save or reject candidates based on their profile information. This application integrates with the GitHub API to retrieve user profiles and provides an interface for viewing and managing selected candidates.
